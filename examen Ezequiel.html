@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empleados</title>
+    <script src="examen.js"></script>
+</head>
+<body>
+    <h1>EMPRESA POWER-LT</h1>
+    <h2>NOMINA DE EMPLEAD</h2>
+     <style>
+        h1, h2
+        {
+            text-align: center;
+        }
+     </style>
+
+    <br><br>
+    <form>
+    <table widh="65%" border="2">
+    <tr style="background-color: rgb(15, 235, 63);">
+        <th>No.</th>
+        <th>CLAVE</th>
+        <th>NOMBRE</th>
+        <th>CORREO</th>
+        <th>FECHA DE NACIMIENTO</th>
+        <th>SEXO</th>
+        <th>SUELDO POR DIA</th>
+        <th>DIAS TRABAJADOS</th>
+        <th>BONO 1</th>
+        <th>BONO 2</th>
+        <th>BONO 3</th>
+        <th>DESCUENTO 1</th>
+        <th>DESCUENTO 2</th>
+        <th>BOTON</th>
+        <th>SUELDO NETO</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td><input type="number" name="clave1" id="clave1"></td>
+        <td><input type="text" name="nameE1" id="nameE1"></td>
+        <td><input type="email" placeholder="usuario@dominio.com" name="email1" id="email1" required></td>
+        <td><input type="datetime-local" name="fechaN1" id="fechaN1"></td>
+        <td> <select name="sexo" >
+            <option value="hom">Hombre</option>
+            <option value="muj">Mujer</option></select></td>
+        <td><input type="number" name="txtsu1" id="txtsu1"></td>
+        <td><input type="number" name="txtdi1" id="txtdi1"></td>
+        <td><input type="number" name="txtbo1" id="txtbo1"></td>
+        <td><input type="number" name="txtbo12" id="txtbo12"></td>
+        <td><input type="number" name="txtbo13" id="txtbo13"></td>
+        <td><input type="text" name="txtdes1" id="txtdes1"></td>
+        <td><input type="text" name="txtdes12" id="txtdes12"></td>
+        <td><input type="button" value="calcular" name="btnE1" id="btnE1" onclick="sueldo1()"></td>
+        <td><input type="text" name="txtsulNeto1" id="txtsulNeto1"></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td><input type="number" name="clave2" id="clave2"></td>
+        <td><input type="text" name="nameE2" id="nameE2"></td>
+        <td><input type="email" placeholder="usuario@dominio.com" name="email2" id="email2" required></td>
+        <td><input type="datetime-local" name="fechaN2" id="fechaN2"></td>
+        <td><select name="sexo">
+            <option value="hom">Hombre</option>
+            <option value="muj">Mujer</option></select></td>
+        <td><input type="number" name="txtsu2" id="txtsu2"></td>
+        <td><input type="number" name="txtdi2" id="txtdi2"></td>
+        <td><input type="number" name="txtbo2" id="txtbo2"></td>
+        <td><input type="number" name="txtbo22" id="txtbo22"></td>
+        <td><input type="number" name="txtbo23" id="txtbo23"></td>
+        <td><input type="number" name="des2" id="des2"></td>
+        <td><input type="number" name="des22" id="des22"></td>
+        <td><input type="button" value="calcular" name="btnE2" id="btnE2" onclick="sueldo2()"></td>
+        <td><input type="number" name="sulNeto2" id="sulNeto2"></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td><input type="number" name="clave3" id="clave3"></td>
+        <td><input type="text" name="nameE3" id="nameE3"></td>
+        <td><input type="email" placeholder="usuario@dominio.com" name="email3" id="email3" required></td>
+        <td><input type="datetime-local" name="fechaN3" id="fechaN3"></td>
+        <td><select name="sexo">
+            <option value="hom">Hombre</option>
+            <option value="muj">Mujer</option></select></td>
+        <td><input type="number" name="txtsu3" id="txtsu3"></td>
+        <td><input type="number" name="txtdi3" id="txtdi3"></td>
+        <td><input type="number" name="txtbo3" id="txtbo3"></td>
+        <td><input type="number" name="txtbo32" id="txtbo32"></td>
+        <td><input type="number" name="txtbo33" id="txtbo33"></td>
+        <td><input type="number" name="des3" id="des3"></td>
+        <td><input type="number" name="des32" id="des32"></td>
+        <td><input type="button" value="calcular" name="btnE2" id="btnE2" onclick="sueldo3()"></td>
+        <td><input type="number" name="sulNeto3" id="sulNeto3"></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td><input type="number" name="clave4" id="clave4"></td>
+        <td><input type="text" name="nameE4" id="nameE4"></td>
+        <td><input type="email" placeholder="usuario@dominio.com" name="email4" id="email4"></td>
+        <td><input type="datetime-local" name="fechaN4" id="fechaN4"></td>
+        <td><select name="sexo">
+            <option value="hom">Hombre</option>
+            <option value="muj">Mujer</option></select></td>
+        <td><input type="number" name="txtsu4" id="txtsu4"></td>
+        <td><input type="number" name="txtdi4" id="txtdi4"></td>
+        <td><input type="number" name="txtbo4" id="txtbo4"></td>
+        <td><input type="number" name="txtbo42" id="txtbo42"></td>
+        <td><input type="number" name="txtbo43" id="txtbo43"></td>
+        <td><input type="number" name="des4" id="des4"></td>
+        <td><input type="number" name="des42" id="des42"></td>
+        <td><input type="button" value="calcular" name="btnE4" id="btnE4" onclick="sueldo4()"></td>
+        <td><input type="number" name="sulNeto4" id="sulNeto4"></td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td><input type="number" name="clave5" id="clave5"></td>
+        <td><input type="text" name="nameE5" id="nameE5"></td>
+        <td><input type="email" placeholder="usuario@dominio.com" name="email5" id="email5"></td>
+        <td><input type="datetime-local" name="fechaN5" id="fechaN5"></td>
+        <td><select name="sexo">
+            <option value="hom">Hombre</option>
+            <option value="muj">Mujer</option></select></td>
+        <td><input type="number" name="txtsu5" id="txtsu5"></td>
+        <td><input type="number" name="txtdi5" id="txtdi5"></td>
+        <td><input type="number" name="txtbo5" id="txtbo5"></td>
+        <td><input type="number" name="txtbo52" id="txtbo52"></td>
+        <td><input type="number" name="txtbo53" id="txtbo53"></td>
+        <td><input type="number" name="des5" id="des5"></td>
+        <td><input type="number" name="des52" id="des52"></td>
+        <td><input type="button" value="calcular" name="btnE5" id="btnE5" onclick="sueldo5()"></td>
+        <td><input type="number" name="sulNeto5" id="sulNeto5"></td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td><input type="number" name="clave6" id="clave6"></td>
+        <td><input type="text" name="nameE6" id="nameE6"></td>
+        <td><input type="email" placeholder="usuario@dominio.com" name="email6" id="email6"></td>
+        <td><input type="datetime-local" name="fechaN6" id="fechaN6"></td>
+        <td><select name="sexo">
+            <option value="hom">Hombre</option>
+            <option value="muj">Mujer</option></select></td>
+        <td><input type="number" name="txtsu6" id="txtsu6"></td>
+        <td><input type="number" name="txtdi6" id="txtdi6"></td>
+        <td><input type="number" name="txtbo6" id="txtbo6"></td>
+        <td><input type="number" name="txtbo62" id="txtbo62"></td>
+        <td><input type="number" name="txtbo63" id="txtbo63"></td>
+        <td><input type="number" name="des6" id="des6"></td>
+        <td><input type="number" name="des62" id="des62"></td>
+        <td><input type="button" value="calcular" name="btnE6" id="btnE6" onclick="sueldo6()"></td>
+        <td><input type="number" name="sulNeto6" id="sulNeto6"></td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td><input type="number" name="clave7" id="clave7"></td>
+        <td><input type="text" name="name7" id="name7"></td>
+        <td><input type="email" placeholder="usuario@dominio.com" name="email7" id="email7"></td>
+        <td><input type="datetime-local" name="fechaN7" id="fechaN7"></td>
+        <td><select name="sexo">
+            <option value="hom">Hombre</option>
+            <option value="muj">Mujer</option></select></td>
+        <td><input type="number" name="txtsu7" id="txtsu7"></td>
+        <td><input type="number" name="txtdi7" id="txtdi7"></td>
+        <td><input type="number" name="txtbo7" id="txtbo7"></td>
+        <td><input type="number" name="txtbo72" id="txtbo72"></td>
+        <td><input type="number" name="txtbo73" id="txtbo73"></td>
+        <td><input type="number" name="des7" id="des7"></td>
+        <td><input type="number" name="des72" id="des72"></td>
+        <td><input type="button" value="calcular" name="btnE7" id="btnE7" onclick="sueldo7()"></td>
+        <td><input type="number" name="sulNeto7" id="sulNeto7"></td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td><input type="number" name="clave8" id="clave8"></td>
+        <td><input type="text" name="nameE8" id="nameE8"></td>
+        <td><input type="email" placeholder="usuario@dominio.com" name="email8" id="email8"></td>
+        <td><input type="datetime-local" name="fechaN8" id="fechaN8"></td>
+        <td><select name="sexo">
+            <option value="hom">Hombre</option>
+            <option value="muj">Mujer</option></select></td>
+        <td><input type="number" name="txtsu8" id="txtsu8"></td>
+        <td><input type="number" name="txtdiat8" id="txtdi8"></td>
+        <td><input type="number" name="txtbono8" id="txtbo8"></td>
+        <td><input type="number" name="txtbo82" id="txtbo82"></td>
+        <td><input type="number" name="txtbo83" id="txtbo83"></td>
+        <td><input type="number" name="des8" id="des8"></td>
+        <td><input type="number" name="des82" id="des82"></td>
+        <td><input type="button" value="calcular" name="btnE8" id="btnE8" onclick="sueldo8()"></td>
+        <td><input type="number" name="sulNeto8" id="sulNeto8"></td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td><input type="number" name="clave9" id="clave9"></td>
+        <td><input type="text" name="nameE9" id="nameE9"></td>
+        <td><input type="email" placeholder="usuario@dominio.com" name="email9" id="email9"></td>
+        <td><input type="datetime-local" name="fechaN9" id="fechaN9"></td>
+        <td><select name="sexo">
+            <option value="hom">Hombre</option>
+            <option value="muj">Mujer</option></select></td>
+        <td><input type="number" name="txtsu9" id="txtsu9"></td>
+        <td><input type="number" name="txtdi9" id="txtdi9"></td>
+        <td><input type="number" name="txtbo9" id="txtbo9"></td>
+        <td><input type="number" name="txtbo92" id="txtbo92"></td>
+        <td><input type="number" name="txtbo93" id="txtbo93"></td>
+        <td><input type="number" name="des9" id="des9"></td>
+        <td><input type="number" name="des92" id="des92"></td>
+        <td><input type="button" value="calcular" name="btnE9" id="btnE9" onclick="sueldo9()"></td>
+        <td><input type="number" name="sulNeto9" id="sulNeto9"></td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td><input type="number" name="clave10" id="clave10"></td>
+        <td><input type="text" name="nameE10" id="nameE10"></td>
+        <td><input type="email" placeholder="usuario@dominio.com"  name="email10" id="email10"></td>
+        <td><input type="datetime-local" name="fechaN10" id="fechaN10"></td>
+        <td><select name="sexo">
+            <option value="hom">Hombre</option>
+            <option value="muj">Mujer</option></select></td>
+        <td><input type="number" name="txtsu10" id="txtsu10"></td>
+        <td><input type="number" name="txtdi10" id="txtdi10"></td>
+        <td><input type="number" name="txtbo10" id="txtbo10"></td>
+        <td><input type="number" name="txtbo102" id="txtbo102"></td>
+        <td><input type="number" name="txtbo103" id="txtbo103"></td>
+        <td><input type="number" name="des10" id="des10"></td>
+        <td><input type="number" name="des102" id="des102"></td>
+        <td><input type="button" value="calcular" name="btnE10" id="btnE10" onclick="sueldo10()"></td>
+        <td><input type="number" name="sulNeto10" id="sulNeto10"></td>
+    </tr>
+    </table>
+    <br>    
+    <input type="reset" value="limpiar">
+    <br><br>
+    <input type="button" value="Total de sueldos" name="btntSueldos" id="btntsueldos" onclick="ttsueldos()">
+    <input type="text" name="total" id="total">
+</form>
+</body>
+</html>
